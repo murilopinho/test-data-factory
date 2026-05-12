@@ -1,3 +1,4 @@
+﻿// edge cases: empty fields, locked user, wrong credentials
 const loginPage = require('../../support/page-objects/LoginPage');
 const productsPage = require('../../support/page-objects/ProductsPage');
 
@@ -58,3 +59,4 @@ describe('Login', () => {
     cy.url().should('not.include', '/inventory.html');
   });
 });
+
