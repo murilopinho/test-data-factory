@@ -1,4 +1,4 @@
-class CartPage {
+﻿class CartPage {
   elements = {
     title: () => cy.get('.title'),
     cartItems: () => cy.get('.cart_item'),
@@ -42,3 +42,4 @@ class CartPage {
 }
 
 module.exports = new CartPage();
+
