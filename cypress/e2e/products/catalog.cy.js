@@ -1,4 +1,4 @@
-const productsPage = require('../../support/page-objects/ProductsPage');
+﻿const productsPage = require('../../support/page-objects/ProductsPage');
 
 describe('Product Catalog', () => {
   beforeEach(() => {
@@ -42,7 +42,7 @@ describe('Product Catalog', () => {
     });
   });
 
-  it('should sort products by name Z to A', () => {
+  it('should sort products by name Z-A', () => {
     productsPage.sortBy('za');
     productsPage.getItemNames().then(names => {
       const sorted = [...names].sort().reverse();
@@ -56,3 +56,4 @@ describe('Product Catalog', () => {
     cy.get('.inventory_details_name').should('be.visible');
   });
 });
+
