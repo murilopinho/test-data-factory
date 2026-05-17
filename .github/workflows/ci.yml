@@ -1,4 +1,4 @@
-name: E2E Tests
+﻿name: E2E Tests
 
 on:
   push:
@@ -20,6 +20,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # explicit browser flag required - default headless mode was failing without it
       - name: Run Cypress tests
         uses: cypress-io/github-action@v6
         with:
@@ -32,3 +33,4 @@ jobs:
         with:
           name: cypress-screenshots
           path: cypress/screenshots
+
